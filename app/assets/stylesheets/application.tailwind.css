@@ -1,13 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Anaheim&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/*
-
-@layer components {
-  .btn-primary {
-    @apply py-2 px-4 bg-blue-200;
-  }
+html * {
+    font-family: "Anaheim" !important;
 }
 
-*/
+.standard-image {
+    width: 200px;
+    height: 100px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.smaller-image {
+    width: 150px;
+    height: 75px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.larger-image {
+    transform: scale(1.75);
+    transform-origin: center;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.text-hidden {
+    display: none;
+}
+
+.show-on-hover:hover .text-hidden {
+    display: block;
+}

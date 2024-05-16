@@ -1,8 +1,8 @@
-import { Controller } from "@hotwired/stimulus"
+import { Controller } from "@hotwired/stimulus";
 
-export default class HelloController extends Controller {
+export default class extends Controller {
   connect() {
-    console.log('hellooooo controller connected');
+    console.log('projects component controller connected', this.element);
     this.element.addEventListener('mouseenter', this.showContent.bind(this));
     this.element.addEventListener('mouseleave', this.hideContent.bind(this));
   }
