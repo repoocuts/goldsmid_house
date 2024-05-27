@@ -1,62 +1,29 @@
-<!--<div class="min-h-screen flex items-center bg-blue-100">-->
-<!--	<div class="grid grid-rows-3 mt-5 tablet:mr-5">-->
-<!--		<div class="grid grid-cols-3 tablet:grid-cols-3">-->
-<!--			<div></div>-->
-<!--			<div class="mr-5 items-top tablet:ml-5">-->
-<!--				<h1 class="text-red-800 text-4xl font-bold">Hi, I'm Stuart</h1>-->
-				<%#= render BlurbComponent.new %>
-<!--			</div>-->
-<!--			<div class="tablet:hidden"></div>-->
-<!--		</div>-->
-
-<!--		<div class="grid grid-cols-3 laptop:content-center">-->
-<!--			<div></div>-->
-<!--			<div class="mt-5 text-right ml-5 flip-card">-->
-				<%#= render(ProjectsComponent.new) %>
-<!--			</div>-->
-<!--			<div></div>-->
-<!--		</div>-->
-
-<!--		<div class="grid grid-cols-3 laptop:content-center">-->
-<!--			<div></div>-->
-<!--			<div>-->
-<!--				<h1 class="text-red-800 text-2xl text-center font-bold">-->
-					<%#= mail_to "stuart@goldsmidhouse.com", "stuart@goldsmidhouse.com" %>
-<!--				</h1>-->
-<!--			</div>-->
-<!--			<div></div>-->
-<!--		</div>-->
-<!--	</div>-->
-<!--</div>-->
-
-<div class="-mt-24 relative w-full py-12 px-12 bg-yellow-900">
-	<div class="relative z-10 text-center py-24 md:py-48">
-		<h1 class="text-white text-center text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-bold mb-12">STUART COOPER</h1>
-		<div class="flex-1 flex justify-center">
-			<a href="https://www.linkedin.com/in/stuartcooper-gh/" class="mx-2 text-white hover:text-blue-800 mr-5">LinkedIn</a>
-			<a href="https://github.com/repoocuts" class="mx-2 text-white hover:text-black ml-5 mr-5">GitHub</a>
-			<a href="https://twitter.com/repoocuts" class="mx-2 text-white hover:text-blue-600 ml-5">Twitter / X</a>
+<div class="relative w-full py-12 px-12 bg-yellow-900">
+	<div class="relative z-10 text-center py-24 md:py-48 auto-rows-auto">
+		<div class="h1-container">
+			<div class="h1-wrapper">
+				<h1 class="h1-front text-white text-center text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-bold mb-12">STUART COOPER</h1>
+				<h1 class="h1-back text-white text-center text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-bold mb-12">GOLDSMID HOUSE</h1>
+			</div>
+		</div>
+		<div class="pt-8 flex justify-center space-x-5">
+			<a href="https://www.linkedin.com/in/stuartcooper-gh/" class="mx-2 text-white hover:text-blue-800">LinkedIn</a>
+			<a href="https://github.com/repoocuts" class="mx-2 text-white hover:text-black">GitHub</a>
+			<a href="https://twitter.com/repoocuts" class="mx-2 text-white hover:text-blue-600">Twitter / X</a>
 		</div>
 	</div>
-
 	<%= image_tag "logo_de_natas.jpeg", class: "w-full h-full absolute inset-0 object-cover opacity-70" %>
 </div>
 
-<div class="grid grid-cols-1 md:grid-cols-2">
-	<div class="bg-gray-100 p-12 md:p-24 flex justify-center items-center">
-		<div class="max-w-md">
-			<div class="w-24 h-2 bg-yellow-800 mb-4 text-center mx-auto my-auto"></div>
-			<div class="w-full mx-auto my-auto"><%= render BlurbComponent.new %></div>
-		</div>
-	</div>
+<div class="grid grid-cols-1 bg-zinc-50 p-12 md:p-24 flex justify-center items-center">
+	<div class="max-w-md w-24 h-2 bg-yellow-800 mb-4 text-center mx-auto my-auto"></div>
+	<div class="bg-zinc-50 px-12 flex w-full mx-auto my-auto"><%= render BlurbComponent.new %></div>
 </div>
 
-
-<div class="grid grid-cols-1">
-	<div class="p-12 md:p-24 flex justify-center items-center">
-		<div class="max-w-md">
-			<div class="w-24 h-2 bg-yellow-800 mb-4 text-center mx-auto my-auto"></div>
-			<div class="w-full mx-auto my-auto"><%= mail_to('stuart@goldsmidhouse.com', 'Please send me an email if you would like to talk', class: 'text-blue-500 hover:text-blue-700') %></div>
-		</div>
+<div class="grid p-12 md:p-24 flex justify-center items-center">
+	<div class="text-center">
+		<p>Just some of the things I have worked with</p>
 	</div>
+	<div class="px-12 flex w-full mx-auto my-auto"><%= render ProjectsComponent.new %></div>
+	<div></div>
 </div>
