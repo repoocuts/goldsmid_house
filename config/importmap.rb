@@ -7,4 +7,4 @@ pin "@hotwired/stimulus-loading", to: "stimulus-loading.js", preload: true
 pin "flowbite", to: "https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.1.1/flowbite.turbo.min.js"
 pin "typed.js", to: "https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"
 pin_all_from "app/javascript/controllers", under: "controllers"
-pin_all_from "app/components"
+pin_all_from 'app/frontend/components', under: 'controllers', to: 'components'
