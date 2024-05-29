@@ -1,4 +1,4 @@
-<div class="relative w-full py-12 px-12 bg-yellow-900">
+<div class="relative w-full py-12 px-12">
 	<div class="relative z-10 text-center py-24 md:py-48 auto-rows-auto">
 		<div class="h1-container">
 			<div class="h1-wrapper">
@@ -12,12 +12,16 @@
 			<a href="https://twitter.com/repoocuts" class="mx-2 text-white hover:text-blue-600">Twitter / X</a>
 		</div>
 	</div>
-	<%= image_tag "logo_de_natas.jpeg", class: "w-full h-full absolute inset-0 object-cover opacity-70" %>
+	<%= image_tag "logo_de_natas.jpeg", class: "w-full h-full absolute inset-0 object-cover opacity-75" %>
 </div>
 
-<div class="grid grid-cols-1 bg-zinc-50 p-12 md:p-24 flex justify-center items-center">
-	<div class="max-w-md w-24 h-2 bg-yellow-800 mb-4 text-center mx-auto my-auto"></div>
-	<div class="bg-zinc-50 px-12 flex w-full mx-auto my-auto"><%= render BlurbComponent.new %></div>
+<div class="grid grid-cols-3 bg-zinc-50 p-12 md:p-24 flex justify-center items-center">
+	<div></div>
+	<div>
+		<div class="max-w-md w-24 h-2 bg-yellow-800 mb-4 text-center mx-auto my-auto"></div>
+		<div class="bg-zinc-50 px-12 flex w-full mx-auto my-auto"><%= render BlurbComponent.new %></div>
+	</div>
+	<div></div>
 </div>
 
 <div class="grid p-12 md:p-24 flex justify-center items-center">
