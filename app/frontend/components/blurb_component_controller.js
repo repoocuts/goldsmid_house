@@ -15,22 +15,17 @@ export default class extends Controller {
 		const typeParagraph = () => {
 			if (index < paragraphs.length) {
 				const textLength = paragraphs[index].textContent.length;
-				const typingDuration = textLength * 0.02;
+				const typingDuration = 3;
 
 				paragraphs[index].classList.add("typing-active");
 				paragraphs[index].style.animation = `typing ${typingDuration}s steps(${textLength}, end) forwards`;
-				paragraphs[index].classList.add("blinking");
-
-				let stepsCompleted = 0
 
 				paragraphs[index].addEventListener('animationend', (event) => {
-					stepsCompleted++
 					if (event.animationName === 'typing') {
 						paragraphs[index].classList.remove("typing-active");
-						paragraphs[index].classList.remove("blinking");
 						paragraphs[index].classList.add("typing-done");
 						index++;
-						setTimeout(typeParagraph, 500); // Delay before typing the next line
+						setTimeout(typeParagraph, 500);
 					}
 				}, { once: true });
 			}
