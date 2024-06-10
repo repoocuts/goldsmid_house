@@ -15,11 +15,11 @@
 	<%= image_tag "logo_de_natas.jpg", class: "w-full h-full absolute inset-0 object-cover opacity-75" %>
 </div>
 
-<div class="grid grid-cols-3 bg-zinc-50 p-12 md:p-24 flex justify-center items-center">
+<div class="grid grid-cols-3 bg-zinc-50 p-4 md:p-24 flex justify-center">
 	<div></div>
-	<div>
-		<div class="max-w-md w-24 h-2 bg-yellow-800 mb-4 text-center mx-auto my-auto"></div>
-		<div class="bg-zinc-50 px-12 flex w-full mx-auto my-auto"><%= render BlurbComponent.new %></div>
+	<div class="w-auto flex-wrap">
+		<div class="w-24 h-2 bg-yellow-800 mb-4 text-center mx-auto"></div>
+		<div class="bg-zinc-50 px-4 md:px-12 mx-auto"><%= render BlurbComponent.new %></div>
 	</div>
 	<div></div>
 </div>
